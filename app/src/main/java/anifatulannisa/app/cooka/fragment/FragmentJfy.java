@@ -1,4 +1,4 @@
-package anifatulannisa.app.cooka;
+package anifatulannisa.app.cooka.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import anifatulannisa.app.cooka.R;
+import anifatulannisa.app.cooka.adapter.JfyAdapter;
+import anifatulannisa.app.cooka.model.JustForYou;
 
 /**
  * Created by annisatahira on 07/01/19.

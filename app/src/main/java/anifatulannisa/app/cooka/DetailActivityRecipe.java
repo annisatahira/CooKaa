@@ -12,10 +12,10 @@ import anifatulannisa.app.cooka.fragment.FragmentAllRecipe;
 import anifatulannisa.app.cooka.fragment.FragmentJfy;
 
 /**
- * Created by annisatahira on 07/01/19.
+ * Created by annisatahira on 09/01/19.
  */
 
-public class MainActivity extends AppCompatActivity {
+public class DetailActivityRecipe extends AppCompatActivity {
 
     private TabLayout tabLayout ;
     private ViewPager viewPager ;
@@ -24,25 +24,24 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_detail_recipe);
 
-        tabLayout = (TabLayout) findViewById(R.id.tablayout_id);
-        viewPager = (ViewPager) findViewById(R.id.viewpager_id);
+        tabLayout = (TabLayout) findViewById(R.id.tablayout2_id);
+        viewPager = (ViewPager) findViewById(R.id.viewpager2_id);
         adapter = new ViewPageAdapter(getSupportFragmentManager());
 
         //tambah fragment
-        adapter.AddFragment(new FragmentJfy(), "Just For You");
-        adapter.AddFragment(new FragmentAllRecipe(), "All Recipe");
+        adapter.AddFragment(new FragmentJfy(), "Pendahuluan");
+        adapter.AddFragment(new FragmentAllRecipe(), "Resep");
+        adapter.AddFragment(new FragmentAllRecipe(), "Cara Memasak");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
         tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#634c40"));
         tabLayout.setSelectedTabIndicatorHeight((int) (5 * getResources().getDisplayMetrics().density));
-        tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#ffffff"));
+        tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#701f3b"));
         ActionBar actionBar = getSupportActionBar();
         actionBar.setElevation(0);
     }
-
-
 }

@@ -1,4 +1,4 @@
-package anifatulannisa.app.cooka;
+package anifatulannisa.app.cooka.model;
 
 /**
  * Created by annisatahira on 07/01/19.

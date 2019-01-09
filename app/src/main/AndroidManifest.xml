@@ -27,6 +27,26 @@
             android:theme="@style/AppTheme"
             android:name=".MainActivity"/>
 
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".DetailActivityBahan"
+            android:label="Bahan Masakan"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+        android:theme="@style/AppTheme"
+        android:name=".DetailActivityRempah"
+        android:label="@string/detail_bahan"
+        android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".DetailActivityRecipe"
+            android:label="Resep makanan"
+            android:parentActivityName=".MainActivity"/>
+
+
+
 
     </application>
 

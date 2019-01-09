@@ -8,7 +8,9 @@
     app:cardBackgroundColor="@color/colorPrimary"
     android:foreground="?selectableItemBackground"
     android:clickable="true"
-    android:id="@+id/cardview_jfy">
+    android:id="@+id/cardview_jfy"
+    app:cardCornerRadius="4dp"
+    android:layout_margin="0dp">
 
     <RelativeLayout
         android:layout_width="match_parent"

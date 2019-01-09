@@ -1,11 +1,9 @@
-package anifatulannisa.app.cooka;
+package anifatulannisa.app.cooka.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +11,10 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import anifatulannisa.app.cooka.R;
+import anifatulannisa.app.cooka.adapter.AllRecipeAdapter;
+import anifatulannisa.app.cooka.model.AllRecipe;
 
 /**
  * Created by annisatahira on 07/01/19.
@@ -43,14 +45,12 @@ public class FragmentAllRecipe extends Fragment {
         super.onCreate(savedInstanceState);
 
         lstRecipe = new ArrayList<>();
-        lstRecipe.add(new AllRecipe(R.drawable.rempah2, "Rempah-Rempah"));
-        lstRecipe.add(new AllRecipe(R.drawable.ic_bahan, "Bahan Masakan"));
-        lstRecipe.add(new AllRecipe(R.drawable.ic_masak, "Tips Memasak"));
-        lstRecipe.add(new AllRecipe(R.drawable.rempah2, "Rempah-Rempah"));
-        lstRecipe.add(new AllRecipe(R.drawable.ic_bahan, "Bahan Masakan"));
-        lstRecipe.add(new AllRecipe(R.drawable.ic_masak, "Tips Memasak"));
-        lstRecipe.add(new AllRecipe(R.drawable.rempah2, "Rempah-Rempah"));
-        lstRecipe.add(new AllRecipe(R.drawable.ic_bahan, "Bahan Masakan"));
-        lstRecipe.add(new AllRecipe(R.drawable.ic_masak, "Tips Memasak"));
+        lstRecipe.add(new AllRecipe(R.drawable.mie, "Mie"));
+        lstRecipe.add(new AllRecipe(R.drawable.perkedel, "Perkedel"));
+        lstRecipe.add(new AllRecipe(R.drawable.sayur_asem, "sayur Asem"));
+        lstRecipe.add(new AllRecipe(R.drawable.steak, "Steak"));
+        lstRecipe.add(new AllRecipe(R.drawable.sup, "Sup"));
+        lstRecipe.add(new AllRecipe(R.drawable.tumis_kangkung, "Tumis Kangkung"));
+
     }
 }

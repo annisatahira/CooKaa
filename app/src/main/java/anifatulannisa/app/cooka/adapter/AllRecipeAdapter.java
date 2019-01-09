@@ -1,4 +1,4 @@
-package anifatulannisa.app.cooka;
+package anifatulannisa.app.cooka.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -12,6 +12,9 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import anifatulannisa.app.cooka.model.AllRecipe;
+import anifatulannisa.app.cooka.R;
 
 /**
  * Created by annisatahira on 07/01/19.

@@ -7,7 +7,7 @@
     android:background="@color/backgroundFragment">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvAllResep"
+        android:id="@+id/rvDetailJfy"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
