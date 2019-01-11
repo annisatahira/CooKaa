@@ -3,6 +3,7 @@ package anifatulannisa.app.cooka.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import anifatulannisa.app.cooka.DefaultActivity;
 import anifatulannisa.app.cooka.DetailActivityBahan;
 import anifatulannisa.app.cooka.DetailActivityRecipe;
 import anifatulannisa.app.cooka.DetailActivityRempah;
@@ -54,7 +56,7 @@ public class JfyAdapter extends RecyclerView.Adapter<JfyAdapter.JfyHolder> {
                         intent =  new Intent(context, DetailActivityBahan.class);
                         break;
                     default:
-                        intent =  new Intent(context, DetailActivityRecipe.class);
+                        intent =  new Intent(context, DefaultActivity.class);
                         break;
                 }
                 context.startActivity(intent);

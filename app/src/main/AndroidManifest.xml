@@ -45,6 +45,12 @@
             android:label="Resep makanan"
             android:parentActivityName=".MainActivity"/>
 
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".DefaultActivity"
+            android:label="Kembali ke Menu"
+            android:parentActivityName=".MainActivity"/>
+
 
 
 

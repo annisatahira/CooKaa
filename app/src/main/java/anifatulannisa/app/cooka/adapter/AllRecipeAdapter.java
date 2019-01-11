@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import anifatulannisa.app.cooka.DefaultActivity;
 import anifatulannisa.app.cooka.DetailActivityBahan;
 import anifatulannisa.app.cooka.DetailActivityRecipe;
 import anifatulannisa.app.cooka.DetailActivityRempah;
@@ -46,12 +47,13 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.AllR
                 switch (position){
                     case 0:
                         intent =  new Intent(context, DetailActivityRecipe.class);
+                        intent.putExtra("id_img_detail_recipe", reseps.get(position).getImgAllRecipe());
                         break;
                     case 1:
-                        intent =  new Intent(context, DetailActivityRecipe.class);
+                        intent =  new Intent(context, DefaultActivity.class);
                         break;
                     default:
-                        intent =  new Intent(context, DetailActivityRecipe.class);
+                        intent =  new Intent(context, DefaultActivity.class);
                         break;
                 }
                 context.startActivity(intent);
@@ -67,15 +69,6 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.AllR
         Glide.with(context).load(reseps.get(position).getImgAllRecipe()).into(holder.img_all_recipe);
 
         holder.txt_all_recipe.setText(reseps.get(position).getNamaAllRecipe());
-
-        holder.cardItemRecipe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(v.getContext(), DetailActivityRecipe.class);
-                i.putExtra("id_img_detail_recipe", reseps.get(position).getImgAllRecipe());
-                v.getContext().startActivity(i);
-            }
-        });
 
     }
 
