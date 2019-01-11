@@ -45,12 +45,12 @@ public class FragmentAllRecipe extends Fragment {
         super.onCreate(savedInstanceState);
 
         lstRecipe = new ArrayList<>();
+        lstRecipe.add(new AllRecipe(R.drawable.tumis_kangkung, "Tumis Kangkung"));
         lstRecipe.add(new AllRecipe(R.drawable.mie, "Mie"));
         lstRecipe.add(new AllRecipe(R.drawable.perkedel, "Perkedel"));
         lstRecipe.add(new AllRecipe(R.drawable.sayur_asem, "sayur Asem"));
         lstRecipe.add(new AllRecipe(R.drawable.steak, "Steak"));
         lstRecipe.add(new AllRecipe(R.drawable.sup, "Sup"));
-        lstRecipe.add(new AllRecipe(R.drawable.tumis_kangkung, "Tumis Kangkung"));
 
     }
 }

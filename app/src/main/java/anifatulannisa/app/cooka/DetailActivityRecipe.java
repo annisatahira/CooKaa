@@ -12,7 +12,10 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 
 import anifatulannisa.app.cooka.fragment.FragmentAllRecipe;
+import anifatulannisa.app.cooka.fragment.FragmentBahan;
 import anifatulannisa.app.cooka.fragment.FragmentJfy;
+import anifatulannisa.app.cooka.fragment.FragmentPembuatan;
+import anifatulannisa.app.cooka.fragment.FragmentPendahuluan;
 
 /**
  * Created by annisatahira on 09/01/19.
@@ -36,9 +39,9 @@ public class DetailActivityRecipe extends AppCompatActivity {
         adapter = new ViewPageAdapter(getSupportFragmentManager());
 
         //tambah fragment
-        adapter.AddFragment(new FragmentJfy(), "Pendahuluan");
-        adapter.AddFragment(new FragmentAllRecipe(), "Resep");
-        adapter.AddFragment(new FragmentAllRecipe(), "Cara Memasak");
+        adapter.AddFragment(new FragmentPendahuluan(), "Pendahuluan");
+        adapter.AddFragment(new FragmentBahan(), "Bahan");
+        adapter.AddFragment(new FragmentPembuatan(), "Cara Memasak");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
