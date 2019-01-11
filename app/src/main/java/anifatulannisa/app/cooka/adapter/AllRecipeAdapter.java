@@ -1,6 +1,7 @@
 package anifatulannisa.app.cooka.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -13,6 +14,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import anifatulannisa.app.cooka.DetailActivityBahan;
+import anifatulannisa.app.cooka.DetailActivityRecipe;
+import anifatulannisa.app.cooka.DetailActivityRempah;
 import anifatulannisa.app.cooka.model.AllRecipe;
 import anifatulannisa.app.cooka.R;
 
@@ -33,14 +37,46 @@ public class AllRecipeAdapter extends RecyclerView.Adapter<AllRecipeAdapter.AllR
     @NonNull
     @Override
     public AllRecipeHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new AllRecipeHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_all_recipe, null));
+        final AllRecipeHolder holder = new AllRecipeHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_all_recipe, null));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final Intent intent;
+                int position = holder.getAdapterPosition();
+                switch (position){
+                    case 0:
+                        intent =  new Intent(context, DetailActivityRecipe.class);
+                        break;
+                    case 1:
+                        intent =  new Intent(context, DetailActivityRecipe.class);
+                        break;
+                    default:
+                        intent =  new Intent(context, DetailActivityRecipe.class);
+                        break;
+                }
+                context.startActivity(intent);
+            }
+        });
+        return holder;
     }
+
+
 
     @Override
     public void onBindViewHolder(AllRecipeHolder holder, final int position) {
         Glide.with(context).load(reseps.get(position).getImgAllRecipe()).into(holder.img_all_recipe);
 
         holder.txt_all_recipe.setText(reseps.get(position).getNamaAllRecipe());
+
+        holder.cardItemRecipe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(v.getContext(), DetailActivityRecipe.class);
+                i.putExtra("id_img_detail_recipe", reseps.get(position).getImgAllRecipe());
+                v.getContext().startActivity(i);
+            }
+        });
+
     }
 
     @Override

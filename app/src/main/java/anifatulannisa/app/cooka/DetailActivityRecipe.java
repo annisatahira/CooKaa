@@ -7,6 +7,9 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 import anifatulannisa.app.cooka.fragment.FragmentAllRecipe;
 import anifatulannisa.app.cooka.fragment.FragmentJfy;
@@ -20,6 +23,8 @@ public class DetailActivityRecipe extends AppCompatActivity {
     private TabLayout tabLayout ;
     private ViewPager viewPager ;
     private ViewPageAdapter adapter;
+
+    ImageView imgDetail;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,5 +48,19 @@ public class DetailActivityRecipe extends AppCompatActivity {
         tabLayout.setTabTextColors(Color.parseColor("#727272"), Color.parseColor("#701f3b"));
         ActionBar actionBar = getSupportActionBar();
         actionBar.setElevation(0);
+
+        imgDetail = (ImageView) findViewById(R.id.img_detail_recipe);
+
+        getData();
+
+
+
     }
+
+    private void getData() {
+
+        Glide.with(this).load(getIntent().getIntExtra("id_img_detail_recipe", 0)).into(imgDetail);
+    }
+
+
 }
